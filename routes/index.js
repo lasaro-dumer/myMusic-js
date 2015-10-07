@@ -1,5 +1,5 @@
 exports.index = function(req, res){
-    res.send('oi')
+    res.render('index')
 }
 
 var http = require('http'),

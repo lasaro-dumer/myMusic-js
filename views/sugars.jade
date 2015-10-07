@@ -1,0 +1,25 @@
+mixin alert(options)
+    div(class=("alert alert-"+options.type+" fade in"))
+        a(href="#",class="close",data-dismiss="alert",aria-label="close") &times;
+        strong=options.title + "! "
+        = options.msg
+mixin btnBase(options)
+    button(type=options.type,id=options.id,class="btn btn-"+options.class,onClick=options.onClick)&attributes(attributes)=options.label
+mixin btnDefault(options)
+    - options.class = 'default'
+    +btnBase(options)&attributes(attributes)
+mixin btnPrimary(options)
+    - options.class = 'primary'
+    +btnBase(options)&attributes(attributes)
+mixin btnSuccess(options)
+    - options.class = 'success'
+    +btnBase(options)&attributes(attributes)
+mixin btnInfo(options)
+    - options.class = 'info'
+    +btnBase(options)&attributes(attributes)
+mixin btnWarning(options)
+    - options.class = 'warning'
+    +btnBase(options)&attributes(attributes)
+mixin btnDanger(options)
+    - options.class = 'danger'
+    +btnBase(options)&attributes(attributes)

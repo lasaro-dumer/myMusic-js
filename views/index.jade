@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    script.
+        $(document).ready(function(){
+            $("#streamPlayer").prop("volume",0.1);
+        });
+    audio(controls,autoplay,volume="0.1",id="streamPlayer")
+        source(src="\\stream",type="audio/mpeg")
